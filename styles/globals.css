@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "roboto";
+	src: url(../public/Roboto-Regular.ttf);
+}
+
+html {
+	scroll-behavior: smooth
+}
+
+body {
+	background-color: #FAFAFA;
+	font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+	color: hsl(233, 26%, 24%);
+	font-family: roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main p, main small {
+	color: hsl(233, 8%, 62%);
+}
+
+.grayish {
+	color: #404040;
+}
+
+.nav-mobile-bg {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(0deg, #FFFFFFA3 0px, #020229DE 150%);
+	height: 100vh;
+	z-index: 99;
+}
+
+.nav-mobile-bg > ul {
+	background-color: white;
+	margin: 0 auto;
+	max-width: 30rem;
+	text-align: center;
+	padding: 1rem 0
+}
+
+.nav-mobile-bg li {
+	padding: 0.5rem 0
+}
+
+.invite-btn {
+	text-align: center;
+	font-size: 0.85rem;
+	font-weight: bold;
+	border-radius: 50px;
+	padding: .5rem .75rem;
+	background: linear-gradient(90deg, hsl(136, 65%, 51%) 0px, hsl(192, 70%, 51%) 90%);
+	text-decoration: none;
+	color: azure;
+	width: 60%;
+	max-width: 10rem;
+}
+
+.invite-btn:hover, .invite-btn:focus {
+	background: linear-gradient(90deg, hsl(136deg 84.72% 64.9%) 0px, hsl(192deg 75.42% 62.16%) 90%)
+}
+
+.hero > .container {
+	background: url("../public/bg-intro-mobile.svg");
+	background-size: 100%;
+	background-position: left 0px top -70px;
+	background-repeat: no-repeat;
+}
+
+#articles a::after {
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 100%;
+}
+
+#articles img {
+	transition: all 1000ms;
+}
+
+#articles img:hover {
+	transform: scale(1.1);
+}
+
+footer nav a:hover, #articles a[href]:hover {
+	color: green;
+}
+
+@media (min-width: 640px) {
+	.hero {
+		height: clamp(85vh, 100vh, 500px);
+	}
+
+	.hero > .container {
+		background: url("../public/bg-intro-desktop.svg");
+		background-size: 80%;
+		background-position: right -100px top -70px;
+		background-repeat: no-repeat
+	}
+}
+
+@media (min-width: 768px) {
+	.nav-mobile-bg {
+		background: transparent;
+		position: static;
+		height: max-content;
+		padding: 0;
+	}
+	
+	.nav-mobile-bg > ul {
+		background-color: transparent;
+		width: auto;
+		text-align: left;
+		display: flex;
+		align-items: center;
+		max-width: max-content;
+		padding: 0.1rem 0
+	}
+	
+	.nav-mobile-bg li {
+		display: inline-block;
+		padding: 1rem 0;
+		margin: 0 0.75rem;
+		font-size: 0.75rem;
+		color: #7B7BA1;
+		border: none;
+		border-bottom: 3px solid transparent;
+	}
+	
+	.nav-mobile-bg li:hover {
+		border-bottom: 3px solid #55CF9E;
+	}
+}
