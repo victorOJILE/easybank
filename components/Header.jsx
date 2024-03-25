@@ -16,7 +16,7 @@ export default function Header() {
           <div className="md:w-6/12 md:absolute top-0 z-0 right-0 px-4 md:p-0">
             <img className="mx-auto" src="image-mockups.png" alt="" />
           </div>
-          <div className="w-full md:w-5/12 p-4 text-center md:text-left mb-5 md:mb-0 md:mt-10">
+          <div className="w-full md:max-w-80 lg:4/12 p-4 text-center md:text-left mb-5 md:mb-0 md:mt-10">
             <h1 className="text-3xl">Next generation<br />digital banking</h1>
             <p className="text-gray-500 py-4 text-sm leading-relaxed max-w-sm mx-auto">
               Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
