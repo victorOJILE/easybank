@@ -14,7 +14,7 @@ export default function Header() {
       <section className="relative hero">
         <div className="container mx-auto flex flex-wrap items-center">
           <div className="md:w-6/12 md:absolute max-w-4xl top-0 z-0 right-0 px-4 md:p-0">
-            <img className="transform translate-x-32 mx-auto" src="image-mockups.png" alt="" />
+            <img className="md:transform md:translate-x-32 mx-auto" src="image-mockups.png" alt="" />
           </div>
           <div className="w-full md:w-6/12 lg:w-5/12 p-4 text-center md:text-left mb-5 md:my-32 xl:my-48">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl xl:leading-tight">Next generation<br />digital banking</h1>
