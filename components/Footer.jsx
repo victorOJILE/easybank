@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="md:col-span-4 grid md:grid-cols-2 gap-8 pl-3 text-blue-100">
           <div>
             <a className="block">
-              <img className="w-32 mx-auto lg:m-0" src="logo_light.svg" alt="" />
+              <img className="w-32 mx-auto md:m-0" src="logo_light.svg" alt="" />
             </a>
             <nav className="mt-10">
               <ul className="text-center md:text-left">
