@@ -1,66 +1,60 @@
 export default function Articles() {
+  const articles = [
+    {
+      author: "Claire Robinson",
+      url: "#",
+      title: "Receive money in any currency with no fees",
+      description: "The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single",
+      photoUrl: "image-currency.jpg",
+      photoAlt: ""
+    },
+    {
+      author: "Wilson Hutton",
+      url: "#",
+      title: "Treat yourself without worrying about money",
+      description: "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you",
+      photoUrl: "image-restaurant.jpg",
+      photoAlt: ""
+    },
+    {
+      author: "Wilson Hutton",
+      url: "#",
+      title: "Take your Easybank card wherever you go",
+      description: "We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you",
+      photoUrl: "image-plane.jpg",
+      photoAlt: ""
+    },
+    {
+      author: "Claire Robinson",
+      url: "#",
+      title: "Our invite-only Beta accounts are now live!",
+      description: "After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site",
+      photoUrl: "image-confetti.jpg",
+      photoAlt: ""
+    }
+  ];
+
   return (
     <section>
-      <div className="container mx-auto max-w-5xl p-6 lg:p-0" id="articles">
-        <h2 className="text-2xl leading-relaxed mb-5 md:my-8 text-center md:text-left md:text-3xl"><strong>Latest Articles</strong></h2>
+      <div className="container mx-auto p-6" id="articles">
+        <h2 className="text-2xl md:text-3xl xl:text-4xl mb-5 md:my-8 text-center md:text-left">Latest Articles</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-8">
-          <div className="rounded-md shadow-sm md:shadow-lg overflow-auto">
-            <div className="overflow-hidden">
-              <img className="w-full" src="image-currency.jpg" alt="" />
-            </div>
-            <div className="p-4 text-xs relative">
-              <small className="text-gray-40">By Claire Robinson</small>
-              <h3 className="text-base leading-normal mb-2 sm:mt-1">
-                <a href="#">Receive money in any currency with no fees</a>
-              </h3>
-              <p className="line-clamp-3 lg:line-clamp-4 leading-relaxed mb-3">
-                The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single
-              </p>
-            </div>
-          </div>
-          <div className="rounded-md shadow-sm md:shadow-lg overflow-auto">
-            <div className="overflow-hidden">
-              <img className="w-full" src="image-restaurant.jpg" alt="" />
-            </div>
-            <div className="p-4 text-xs relative">
-              <small className="text-gray-400">By Wilson Hutton</small>
-              <h3 className="text-base leading-normal mb-2 sm:mt-1">
-                <a href="#">
-                  Treat yourself without worrying about money
-                </a>
-              </h3>
-              <p className="line-clamp-3 lg:line-clamp-4 leading-relaxed">Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you</p>
-            </div>
-          </div>
-          <div className="rounded-md shadow-sm md:shadow-lg overflow-auto">
-            <div className="overflow-hidden">
-              <img className="w-full" src="image-plane.jpg" alt="" />
-            </div>
-            <div className="p-4 text-xs relative">
-              <small className="text-gray-400">By Wilson Hutton</small>
-              <h3 className="text-base leading-normal mb-2 sm:mt-1">
-                <a href="#">
-                  Take your Easybank card wherever you go
-                </a>
-              </h3>
-              <p className="line-clamp-3 lg:line-clamp-4 leading-relaxed">We want you to enjoy your travels. This is why we don’t charge any fees on purchases
-                while you’re abroad. We’ll even show you</p>
-            </div>
-          </div>
-          <div className="rounded-md shadow-sm md:shadow-lg overflow-auto">
-            <div className="overflow-hidden">
-              <img className="w-full" src="image-confetti.jpg" alt="" />
-            </div>
-            <div className="p-4 text-xs relative">
-              <small className="text-gray-400">By Claire Robinson</small>
-              <h3 className="text-base leading-normal mb-2 sm:mt-1">
-                <a href="#">
-                  Our invite-only Beta accounts are now live!
-                </a>
-              </h3>
-              <p className="line-clamp-3 lg:line-clamp-4 leading-relaxed">After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site</p>
-            </div>
-          </div>
+          {
+            articles.map((article, index) => (
+              <div key={index} className="rounded-md shadow-sm md:shadow-lg overflow-auto">
+                <div className="overflow-hidden">
+                  <img className="w-full" src={article.photoUrl} alt={article.photoAlt} />
+                </div>
+                <div className="p-4 relative">
+                  <small className="text-gray-400 text-xs md:text-sm">By {" "}{article.author}</small>
+                  <h3 className="text-base xl:text-xl mb-2 sm:mt-1">
+                    <a href="#">{article.title}</a>
+                  </h3>
+                  <p className=" text-xs md:text-sm line-clamp-3 lg:line-clamp-4 leading-relaxed mb-3">{article.description}</p>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
       <br />

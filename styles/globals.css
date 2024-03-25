@@ -67,7 +67,7 @@ main p, main small {
 	background: linear-gradient(90deg, hsl(136deg 84.72% 64.9%) 0px, hsl(192deg 75.42% 62.16%) 90%)
 }
 
-.hero > .container {
+.hero {
 	background: url("../public/bg-intro-mobile.svg");
 	background-size: 100%;
 	background-position: left 0px top -70px;
@@ -97,15 +97,12 @@ footer nav a:hover, #articles a[href]:hover {
 
 @media (min-width: 768px) {
 	.hero {
-		height: clamp(85vh, 100vh, 500px);
-	}
-
-	.hero > .container {
 		background: url("../public/bg-intro-desktop.svg");
-		background-size: 80%;
-		background-position: right -100px top -70px;
+		background-size: 65%;
+		background-position: right -100px top -100px;
 		background-repeat: no-repeat
 	}
+
 	.nav-mobile-bg {
 		background: transparent;
 		position: static;
@@ -135,5 +132,17 @@ footer nav a:hover, #articles a[href]:hover {
 	
 	.nav-mobile-bg li:hover {
 		border-bottom: 3px solid #55CF9E;
+	}
+}
+
+@media (min-width: 1024px) {
+	.nav-mobile-bg li {
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 1440px) {
+	.hero {
+		background-size: 55%;
 	}
 }

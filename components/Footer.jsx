@@ -2,8 +2,8 @@
 export default function Footer() {
   return (
     <footer className="bg-gray-800 py-10 md:py-8">
-      <div className="container mx-auto max-w-5xl grid md:grid-cols-6 gap-8">
-        <div className="md:col-span-4 grid md:grid-cols-2 gap-8 pl-3 text-blue-100">
+      <div className="container mx-auto grid md:grid-cols-6 gap-8">
+        <div className="md:col-span-4 grid md:grid-cols-2 pl-3 text-blue-100">
           <div>
             <a className="block">
               <img className="w-32 mx-auto md:m-0" src="logo_light.svg" alt="" />
@@ -63,13 +63,15 @@ export default function Footer() {
             </ul>
           </nav>
         </div>
-        <div className="md:col-span-2 text-gray-500 pr-3">
-          <a href="" className="invite-btn block mx-auto mb-5 md:mr-0">
-            Request Invite
-          </a>
-          <p className="text-sm text-center md:text-right">
-            <b dangerouslySetInnerHTML={{ __html: "&copy; Easybank. All Rights Reserved" }} />
-          </p>
+        <div className="md:col-span-2 pr-3">
+          <a href="" className="invite-btn block mx-auto mb-5 md:mr-0">Request Invite</a>
+          <div className="text-sm text-center md:text-right text-gray-500">
+            <p><b dangerouslySetInnerHTML={{ __html: "&copy; Easybank. All Rights Reserved" }} /></p>
+            <div className="py-3">
+              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+              Coded by <a href="#" dangerouslySetInnerHTML={{ __html: "Victor&nbsp;Ojile"  }}></a>.
+            </div>
+          </div>
         </div>
       </div>
     </footer>
