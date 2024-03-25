@@ -95,7 +95,7 @@ footer nav a:hover, #articles a[href]:hover {
 	color: green;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
 	.hero {
 		height: clamp(85vh, 100vh, 500px);
 	}
@@ -106,9 +106,6 @@ footer nav a:hover, #articles a[href]:hover {
 		background-position: right -100px top -70px;
 		background-repeat: no-repeat
 	}
-}
-
-@media (min-width: 768px) {
 	.nav-mobile-bg {
 		background: transparent;
 		position: static;

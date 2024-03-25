@@ -13,15 +13,15 @@ export default function Header() {
       </div>
       <section className="hero">
         <div className="relative container mx-auto max-w-5xl h-full flex flex-wrap items-center">
-          <div className="px-4 md:p-0">
-            <img className="mx-auto sm:w-1/2 md:w-3/5 sm:absolute top-0 z-0 right-0 lg:max-w-4xl" src="image-mockups.png" alt="" />
+          <div className="md:w-6/12 md:absolute top-0 z-0 right-0 px-4 md:p-0">
+            <img className="mx-auto" src="image-mockups.png" alt="" />
           </div>
-          <div className="sm:w-1/2 md:w-1/3 p-4 text-center sm:text-left mb-5 md:mb-0 md:mt-10">
+          <div className="w-full md:w-5/12 p-4 text-center md:text-left mb-5 md:mb-0 md:mt-10">
             <h1 className="text-3xl">Next generation<br />digital banking</h1>
-            <p className="text-gray-500 py-4 text-sm leading-relaxed">
+            <p className="text-gray-500 py-4 text-sm leading-relaxed max-w-sm mx-auto">
               Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.
             </p>
-            <a href="" className="mt-3 invite-btn block mx-auto sm:ml-0">
+            <a href="" className="mt-3 invite-btn block mx-auto md:ml-0">
               Request Invite
             </a>
           </div>
