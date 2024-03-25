@@ -4,8 +4,8 @@ export default function Header() {
   return (
     <header className="relative">
       <div className="sm:absolute top-0 left-0 w-full bg-white z-50">
-        <nav className="container mx-auto max-w-5xl flex items-center justify-between relative">
-          <a href="/" className="inline-block p-5 md:px-0">
+        <nav className="container mx-auto max-w-5xl flex items-center justify-between relative lg:px-4">
+          <a href="/" className="inline-block p-5">
             <img className="w-32" src="logo.svg" alt="Easy Bank Official Logo" />
           </a>
           <TopNavigation />
